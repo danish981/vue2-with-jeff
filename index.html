@@ -5,20 +5,44 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script src="https://unpkg.com/vue@3"></script>
+
+    <style>
+        body {
+            font-family: 'Times New Roman', Times, serif;
+        }
+    </style>
+
 </head>
 <body>
     
 <div id="app">
-    {{ greeting }}
+
+    <p>
+        <input type="text" v-model="greeting">
+    </p>
+
+    <p>
+       {{ greeting }} ({{ greeting.length }})  
+    </p>
+
 </div>
 
 <script>
     Vue.createApp({
         data() {
             return {
-                greeting : 'Hello World | Jeffery Wayy'
-            }
+                greeting : 'hello world'
+            };
+        },
+
+        mounted () {
+            setTimeout(() => {
+                this.greeting = 'changed'
+            }, 3000);
         }
+
+
+
     }).mount('#app');
 </script>
 
