@@ -2,9 +2,7 @@
 
 ## Tutor : Jefferey way
 
-[Current video](https://youtu.be/J4aNmkEGTu0)
+__Current Video I'm watching__
 
 
-__Current Video #1 (time)__
-
-> https://youtu.be/BZwn47RPiAM?list=PL3VM-unCzF8jX-GoazLPcbi7M0wJux8F-&t=125
+(Video 2 : Attribute binding and even handling)[https://youtu.be/J4aNmkEGTu0?list=PL3VM-unCzF8jX-GoazLPcbi7M0wJux8F-]
