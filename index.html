@@ -3,18 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Vue3 Jeff</title>
+    <link rel="icon" type="image/x-icon" href="/assets/images/vuejs.png">
     <script src="https://unpkg.com/vue@3"></script>
-
     <style>
         body {
             font-family: 'Times New Roman', Times, serif;
         }
     </style>
-
 </head>
 <body>
-    
+
 <div id="app">
 
     <p>
@@ -22,7 +21,7 @@
     </p>
 
     <p>
-       {{ greeting }} ({{ greeting.length }})  
+        {{ greeting }} ({{ greeting.length }})
     </p>
 
 </div>
@@ -31,18 +30,14 @@
     Vue.createApp({
         data() {
             return {
-                greeting : 'hello world'
+                greeting: 'hello world'
             };
         },
-
-        mounted () {
+        mounted() {
             setTimeout(() => {
                 this.greeting = 'changed'
             }, 3000);
         }
-
-
-
     }).mount('#app');
 </script>
 
