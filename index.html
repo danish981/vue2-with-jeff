@@ -30,12 +30,12 @@
     Vue.createApp({
         data() {
             return {
-                greeting: 'hello world'
+                greeting: 'Hello World'
             };
         },
         mounted() {
             setTimeout(() => {
-                this.greeting = 'changed'
+                this.greeting = 'text changed to New Hello World'
             }, 3000);
         }
     }).mount('#app');
