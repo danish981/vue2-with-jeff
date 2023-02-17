@@ -8,7 +8,8 @@
     <script src="https://unpkg.com/vue@3"></script>
     <style>
         body {
-            font-family: 'Times New Roman', Times, serif;
+            background-color: aliceblue;
+            font-family: "JetBrains Mono", sans-serif;
         }
     </style>
 </head>
@@ -16,30 +17,17 @@
 
 <div id="app">
 
-    <p>
-        <input type="text" v-model="greeting">
-    </p>
-
-    <p>
-        {{ greeting }} ({{ greeting.length }})
-    </p>
-
 </div>
+
+
 
 <script>
     Vue.createApp({
-        data() {
-            return {
-                greeting: 'Hello World'
-            };
-        },
-        mounted() {
-            setTimeout(() => {
-                this.greeting = 'text changed to New Hello World'
-            }, 3000);
-        }
+
     }).mount('#app');
 </script>
+
+
 
 </body>
 </html>
