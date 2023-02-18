@@ -15,19 +15,31 @@
 </head>
 <body>
 
+<!-- the vue thing which we are doing, is only be seen and done in this #app div where it is mounted -->
 <div id="app">
+
+    <!-- the text automatically udpated when we type -->
+    <!-- the v-model directive gets data from two sources -->
+    <!-- the one from the method, and from user too -->
+    <!-- it seems like two way street -->
+
+    <!-- realtime the changes are being made AUTOMATICALLY OR WE CAN SAY AUTOMAGICALLY -->
+
+    <p><input type="text" v-model="greeting"></p>
+
+    <p>{{ greeting }} {{ greeting.length}}</p>
 
 </div>
 
-
-
 <script>
     Vue.createApp({
-
+        data() {
+            return {
+                greeting: 'Hello World'
+            }
+        }
     }).mount('#app');
 </script>
-
-
 
 </body>
 </html>
