@@ -37,6 +37,13 @@
             return {
                 greeting: 'Hello World'
             }
+        },
+
+        // mounted even is fired when element is rendered
+        mounted() {
+            setTimeout(() => {
+                this.greeting = 'changed | updated'
+            }, 3000)
         }
     }).mount('#app');
 </script>
