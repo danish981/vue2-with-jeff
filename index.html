@@ -35,7 +35,8 @@
         <!-- we actually are going to use v-bind:class throughout the session / code -->
         <!-- so we have a shorthand like :class for v-bind:class="" -->
         <!-- we call the toggle method, and that method brings the state , on and off -->
-        <button :class="active ? 'text-green' : 'text-red'" v-on:click="toggle">click me</button>
+        <!-- unlike :class shorthand, the click is used like @click="" -->
+        <button :class="active ? 'text-green' : 'text-red'" @click="toggle">click me</button>
     </div>
 
     <script>
