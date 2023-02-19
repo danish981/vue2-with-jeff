@@ -4,4 +4,6 @@
 
 __Current Video I'm watching__
 
-[Lecture 2 : Attribute binding and event Handling](https://youtu.be/BZwn47RPiAM?t=195)
+https://youtu.be/1JCJExQy1no
+
+[Learn Vue 3 - Ep 3, Lists, Conditionals, and Computed Properties](https://youtu.be/1JCJExQy1no)
