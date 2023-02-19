@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="h-full">
 
 <head>
     <meta charset="UTF-8">
@@ -7,55 +7,63 @@
     <title>Vue3 Jeff</title>
     <link rel="icon" type="image/x-icon" href="/assets/images/vuejs.png">
     <script src="https://unpkg.com/vue@3"></script>
-    <style>
-        html, body {
-            height: 100%;
-        }
-
-        body {
-            display: grid;
-            place-items: center;
-        }
-
-        .text-red {
-            color: red;
-        }
-
-        .text-green {
-            color: green;
-        }
-
-    </style>
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
-<body>
+<body class="h-full grid place-items-center">
+<div id="app">
+    <section v-show="inProgressAssignments.length">
+        <h2 class="font-bold mb-2">In Progress</h2>
+        <ul>
+            <li
+                v-for="assignment in inProgressAssignments"
+                :key="assignment.id"
+            >
+                <label>{{ assignment.name }} <input type="checkbox" v-model="assignment.complete"></label>
+            </li>
+        </ul>
+    </section>
 
-    <div id="app">
-        <!-- the class does not work like this, we'll have to use v-bind vue directive -->
-        <!-- we actually are going to use v-bind:class throughout the session / code -->
-        <!-- so we have a shorthand like :class for v-bind:class="" -->
-        <!-- we call the toggle method, and that method brings the state , on and off -->
-        <!-- unlike :class shorthand, the click is used like @click="" -->
-        <button :class="active ? 'text-green' : 'text-red'" @click="toggle">click me</button>
-    </div>
+    <section class="mt-8" v-show="completedAssignments.length">
+        <h2 class="font-bold mb-2">Completed</h2>
+        <ul>
+            <li
+                v-for="assignment in completedAssignments"
+                :key="assignment.id"
+            >
+                <label>{{ assignment.name }} <input type="checkbox" v-model="assignment.complete"></label>
+            </li>
+        </ul>
+    </section>
 
-    <script>
-        Vue.createApp({
-            data() {
-                return {
-                    buttonClasses : 'text-green',
-                    active : false
-                }
+</div>
+
+<script>
+    let app = {
+        data() {
+            return {
+                assignments: [
+                    {id: 1, name: 'Finish Projects', complete: false,},
+                    {id: 2, name: 'Read Chapter 4', complete: false},
+                    {id: 3, name: 'Turn in homework', complete: false},
+                ]
+            }
+        },
+
+        computed: {
+
+            inProgressAssignments() {
+                return this.assignments.filter(assignment => !assignment.complete);
             },
 
-            methods : {
-                toggle() {
-                    this.active = !this.active;
-                }
+            completedAssignments() {
+                return this.assignments.filter(assignment => assignment.complete);
             }
+        }
+    }
 
-        }).mount('#app');
-    </script>
+    Vue.createApp(app).mount('#app');
+</script>
 
 </body>
 
