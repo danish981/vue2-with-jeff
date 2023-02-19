@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,46 +8,54 @@
     <link rel="icon" type="image/x-icon" href="/assets/images/vuejs.png">
     <script src="https://unpkg.com/vue@3"></script>
     <style>
-        body {
-            background-color: aliceblue;
-            font-family: "JetBrains Mono", sans-serif;
+        html, body {
+            height: 100%;
         }
+
+        body {
+            display: grid;
+            place-items: center;
+        }
+
+        .text-red {
+            color: red;
+        }
+
+        .text-green {
+            color: green;
+        }
+
     </style>
 </head>
+
 <body>
 
-<!-- the vue thing which we are doing, is only be seen and done in this #app div where it is mounted -->
-<div id="app">
+    <div id="app">
+        <!-- the class does not work like this, we'll have to use v-bind vue directive -->
+        <!-- we actually are going to use v-bind:class throughout the session / code -->
+        <!-- so we have a shorthand like :class for v-bind:class="" -->
+        <!-- we call the toggle method, and that method brings the state , on and off -->
+        <button :class="active ? 'text-green' : 'text-red'" v-on:click="toggle">click me</button>
+    </div>
 
-    <!-- the text automatically udpated when we type -->
-    <!-- the v-model directive gets data from two sources -->
-    <!-- the one from the method, and from user too -->
-    <!-- it seems like two way street -->
+    <script>
+        Vue.createApp({
+            data() {
+                return {
+                    buttonClasses : 'text-green',
+                    active : false
+                }
+            },
 
-    <!-- realtime the changes are being made AUTOMATICALLY OR WE CAN SAY AUTOMAGICALLY -->
-
-    <p><input type="text" v-model="greeting"></p>
-
-    <p>{{ greeting }} {{ greeting.length}}</p>
-
-</div>
-
-<script>
-    Vue.createApp({
-        data() {
-            return {
-                greeting: 'Hello World'
+            methods : {
+                toggle() {
+                    this.active = !this.active;
+                }
             }
-        },
 
-        // mounted even is fired when element is rendered
-        mounted() {
-            setTimeout(() => {
-                this.greeting = 'changed | updated'
-            }, 3000)
-        }
-    }).mount('#app');
-</script>
+        }).mount('#app');
+    </script>
 
 </body>
+
 </html>
