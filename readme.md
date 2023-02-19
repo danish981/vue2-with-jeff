@@ -4,6 +4,6 @@
 
 __Current Video I'm watching__
 
-https://youtu.be/1JCJExQy1no
+https://youtu.be/1p6BtF76ypk
 
-[Learn Vue 3 - Ep 3, Lists, Conditionals, and Computed Properties](https://youtu.be/1JCJExQy1no)
+[Learn Vue 4 - YOUR FIRST VUE COMPONENT](https://youtu.be/1p6BtF76ypk)
