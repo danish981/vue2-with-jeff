@@ -1,50 +1,11 @@
 <!DOCTYPE html>
-<html class="h-full" lang="en">
-
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <title>Vue3 Jeff</title>
-    <link href="/assets/images/vuejs.png" rel="icon" type="image/x-icon">
-
-    <script src="https://unpkg.com/vue@3"></script>
-    <script src="https://cdn.tailwindcss.com"></script>
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
 </head>
-
-<!-- body -->
-<body class="h-full grid place-items-center">
-
-<!-- component app -->
-<div id="app">
-
-    <!-- we have creaated a child component in vue -->
-    <app-button></app-button>
-
-</div>
-
-<!-- script -->
-<script>
-    let app = {
-        comonents: {
-            'app-button': {
-                mounted() {
-                    alert('hello world')
-                }
-            },
-
-        },
-
-        methods: {
-            mounted() {
-                alert('adsfasdf')
-            }
-        }
-    }
-
-    Vue.createApp(app).mount('#app');   // piece of code where composer are registered globally, or we can do locally inside html
-</script>
-
+<body>
+    
 </body>
-
 </html>

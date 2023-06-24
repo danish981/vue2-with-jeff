@@ -1,12 +1,5 @@
-# Learning vuejs 3 
-
-## Tutor : Jefferey way
-
-__Current Video I'm watching__
-
-https://youtu.be/1p6BtF76ypk
-
-[Learn Vue 4 - YOUR FIRST VUE COMPONENT](https://youtu.be/1p6BtF76ypk)
+# Vuejs course
 
 
-[Deploy VueJS Application on Netlify](https://youtu.be/frDqyCa1qaM)
+
+[Video 1](https://youtu.be/Y05uRiksXXI?list=PL3VM-unCzF8iRyPotjFsgy7EfuCITvr_3)
